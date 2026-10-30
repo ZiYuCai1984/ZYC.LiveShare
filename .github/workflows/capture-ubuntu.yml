@@ -21,3 +21,4 @@ jobs:
         run: ./_bin_build/ZYC.LiveShare.Capture
         env:
           JOIN_LINK: ${{ inputs.join_link }}
+
