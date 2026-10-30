@@ -1,0 +1,23 @@
+﻿name: capture-ubuntu
+
+on:
+  workflow_dispatch:
+    inputs:
+      join_link:
+        required: true
+        type: string
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: |
+          dotnet build ZYC.LiveShare.Capture/ZYC.LiveShare.Capture.csproj \
+          -c Release -p:DefineConstants=CAPTURE_UBUNTU
+
+      - name: Run
+        run: ./_bin_build/ZYC.LiveShare.Capture
+        env:
+          JOIN_LINK: ${{ inputs.join_link }}

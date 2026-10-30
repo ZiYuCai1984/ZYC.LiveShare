@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputPath>$(MSBuildThisFileDirectory)../_bin_build/</OutputPath>
+  </PropertyGroup>
+
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ZYC.CoreToolkit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ZYC.LiveShare\ZYC.LiveShare.csproj" />
+  </ItemGroup>
+
+</Project>

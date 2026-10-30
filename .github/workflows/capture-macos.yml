@@ -1,0 +1,29 @@
+﻿name: capture-macos
+
+on:
+  workflow_dispatch:
+    inputs:
+      join_link:
+        required: true
+        type: string
+
+jobs:
+  run:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: '10.0.x'
+          architecture: arm64
+
+      - name: Build
+        run: |
+          dotnet build ZYC.LiveShare.Capture/ZYC.LiveShare.Capture.csproj \
+          -c Release -p:DefineConstants=CAPTURE_MACOS
+
+      - name: Run
+        run: ./_bin_build/ZYC.LiveShare.Capture
+        env:
+          JOIN_LINK: ${{ inputs.join_link }}

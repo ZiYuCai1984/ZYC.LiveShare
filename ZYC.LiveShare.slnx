@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".github/workflows/capture-macos.yml" />
+    <File Path=".github/workflows/capture-ubuntu.yml" />
+    <File Path=".github/workflows/capture-windows.yml" />
+    <File Path=".gitignore" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Build.targets" />
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="ZYC.LiveShare.Capture/ZYC.LiveShare.Capture.csproj" />
+  <Project Path="ZYC.LiveShare.Tests/ZYC.LiveShare.Tests.csproj" />
+  <Project Path="ZYC.LiveShare/ZYC.LiveShare.csproj" />
+</Solution>

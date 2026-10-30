@@ -1,0 +1,56 @@
+﻿<Project>
+
+  <PropertyGroup>
+    <V_ZYC_CoreToolkit>4.0.5</V_ZYC_CoreToolkit>
+    <V_ZYC_CoreToolkit_Extensions_Fxc>3.8.4</V_ZYC_CoreToolkit_Extensions_Fxc>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Update="ZYC.CoreToolkit" Version="$(V_ZYC_CoreToolkit)" />
+    <PackageReference Update="ZYC.CoreToolkit.Pro" Version="$(V_ZYC_CoreToolkit)" />
+    <PackageReference Update="ZYC.CoreToolkit.Abstractions" Version="$(V_ZYC_CoreToolkit)" />
+    <PackageReference Update="ZYC.CoreToolkit.Extensions.Autofac" Version="$(V_ZYC_CoreToolkit)" />
+    <PackageReference Update="ZYC.CoreToolkit.Extensions.Settings" Version="$(V_ZYC_CoreToolkit)" />
+    <PackageReference Update="ZYC.CoreToolkit.Extensions.WebView2" Version="$(V_ZYC_CoreToolkit)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="ZYC.CoreToolkit.Extensions.Fxc" Version="$(V_ZYC_CoreToolkit_Extensions_Fxc)">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="ZYC.CoreToolkit.CodeGenerator" Version="$(V_ZYC_CoreToolkit)">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime;build;native;contentfiles;analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Update="Microsoft.Azure.Relay" Version="3.1.1" />
+    <PackageReference Update="Microsoft.DevTunnels.Ssh" Version="3.12.42" />
+  </ItemGroup>
+
+
+  <PropertyGroup>
+    <V_Microsoft_Extensions_Logging_Abstractions>10.0.14</V_Microsoft_Extensions_Logging_Abstractions>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Update="Microsoft.Extensions.Logging.Abstractions" Version="$(V_Microsoft_Extensions_Logging_Abstractions)" />
+    <PackageReference Update="Microsoft.Extensions.Logging.Console" Version="$(V_Microsoft_Extensions_Logging_Abstractions)" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Update="coverlet.collector" Version="6.0.4" />
+    <PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Update="xunit" Version="2.9.3" />
+    <PackageReference Update="xunit.runner.visualstudio" Version="3.1.4" />
+  </ItemGroup>
+
+
+</Project>
